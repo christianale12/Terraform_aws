@@ -9,6 +9,10 @@ crash.*.log
 tfplan
 tfplan.json
 
+# Claves SSH de las practicas (privadas)
+practicas/*/practica-*-key
+!practicas/*/practica-*-key.pub
+
 # Variables con posibles datos sensibles
 *.tfvars
 *.tfvars.json
