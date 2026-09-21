@@ -52,4 +52,3 @@ terraform plan && terraform apply
 - [ ] Mover el patrón VPC+subred a un módulo en vez de copiarlo.
 - [ ] Seguir con otras prácticas (routers de tablas, múltiples VPCs, etc.).
 
-Si llegaste acá buscando un tutorial "serio", avisame y lo humano lo cambiamos por corporativo. Pero así (en mis palabras) es como realmente aprendí.
