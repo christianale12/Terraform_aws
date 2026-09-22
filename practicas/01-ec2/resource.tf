@@ -37,3 +37,21 @@ resource "aws_security_group" "lab" {
     Name = "sg-practica-01"
   }
 }
+resource "aws_instance" "maquina" {
+  ami                    = data.aws_ami.UBUNTU.id
+  instance_type          = "t2.micro"
+  subnet_id              = aws_subnet.lab.id
+  vpc_security_group_ids = [aws_security_group.lab.id]
+  tags = {
+    Name = "MiMaquinaVirtual"
+  }
+}
+data "aws_ami" "UBUNTU" {
+  most_recent = true
+  owners      = ["099720109477"]
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/*ubuntu*-amd64-server-*"]
+  }
+}
