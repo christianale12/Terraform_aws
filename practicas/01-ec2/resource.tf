@@ -17,11 +17,11 @@ resource "aws_subnet" "lab" {
 
 resource "aws_security_group" "lab" {
   name        = "mi_primer_firewall"
-  description = "no se que hace"
+  description = "firewall-rules"
   vpc_id      = aws_vpc.lab.id
 
   ingress {
-    description = "HTTP no seguro"
+    description = "conexion-port22"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
